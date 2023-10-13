@@ -42,8 +42,6 @@
   font-weight: 600;
 }
 
-/* ==== */
-
 /* Theme */
 
 .container.dark {
@@ -129,11 +127,5 @@
   .list {
     column-gap: 24px;
     padding: 12px 24px;
-  }
-}
-
-@media screen and (min-width: 1199px) {
-  .wrapper {
-    border: 1px solid rgb(0, 255, 60);
   }
 }
