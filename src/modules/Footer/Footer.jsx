@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TelegramIcon from "@mui/icons-material/Telegram";
@@ -10,6 +11,8 @@ import css from "./footer.module.css";
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
+  const { t } = useTranslation();
+
   return (
     <footer
       className={`${css.wrapper} ${theme === "light" ? css.light : css.dark}`}
@@ -20,18 +23,18 @@ const Footer = () => {
           theme === "light" ? css.light : css.dark
         }`}
       >
-        <h2 className={css.title}>Contact Me</h2>
+        <h2 className={css.title}>{t("contactTitle")} </h2>
         <div className={css.listWrapper}>
           <ul className={css.contactList}>
             <li className={css.item}>
               <a href="tel:+905312993731" className={css.link}>
-                <span className={css.decor}> Phone: </span>
+                <span className={css.decor}>{t("phone")} </span>
                 +90-531-299-37-31
               </a>
             </li>
             <li className={css.item}>
               <a href="mailto:marinachuhlib@gmail.com" className={css.link}>
-                <span className={css.decor}> Email: </span>
+                <span className={css.decor}> {t("email")}</span>
                 marinachuhlib@gmail.com
               </a>
             </li>

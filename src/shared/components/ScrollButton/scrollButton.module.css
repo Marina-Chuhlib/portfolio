@@ -12,18 +12,26 @@
 }
 
 .btnScroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #e1d8ce;
   color: #706458;
   border: none;
   border-radius: 50%;
   width: 50px;
-  font-size: 14px;
+
+  font-size: 12px;
   cursor: pointer;
-  text-align: center;
 
   padding: 4px;
 
   transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btnScroll:hover {

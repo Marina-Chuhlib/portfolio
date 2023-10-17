@@ -33,5 +33,11 @@
   "webStudioContent": "The website not only looks great but also functions smoothly. It offers seamless navigation, quick load times, and an intuitive user interface. The design and layout of the site are aimed at delivering an engaging user experience. It encourages visitors to explore the site and access relevant information effortlessly. The website serves as a showcase of the web studio's work, highlighting their portfolio, services, and expertise.",
   "webStudioTechnologies": "In terms of the technologies used, the website is built with HTML, SASS (a CSS preprocessor), JavaScript (for interactivity), and Parcel (a project bundler). These technologies are commonly used to create modern and responsive web applications. Role: Developer.",
 
-  "visitBtn": "Visit website"
+  "visitBtn": "Visit website",
+
+  "contactTitle": "Contact Me",
+  "phone": "Phone:",
+  "email": "Email:",
+
+  "topBtn": "Top"
 }

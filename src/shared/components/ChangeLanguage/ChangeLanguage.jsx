@@ -1,5 +1,7 @@
 import i18n from "../../../utils/i18n/config";
 
+import css from "./changeLanguage.module.css"
+
 const options = [
   {
     label: "EN",
@@ -24,7 +26,7 @@ const ChangeLanguage = () => {
 
   return (
     <div>
-      <select value={language || ""} onChange={changeLanguage}>
+      <select value={language || "en"} onChange={changeLanguage} className={css.wrapper}>
         {options.map((option, idx) => (
           <option key={idx} value={option.value}>
             {option.label}

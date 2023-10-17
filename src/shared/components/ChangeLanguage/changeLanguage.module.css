@@ -1,0 +1,17 @@
+.wrapper {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  color: #aaa5a0;
+  font-size: 18px;
+}
+
+.wrapper:focus {
+  outline: none;
+}
+
+.wrapper:hover {
+  color: #e6ecc1;
+  box-shadow: 0 10px 5px -5px #e6ecc1;
+}

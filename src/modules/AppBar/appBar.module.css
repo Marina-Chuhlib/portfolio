@@ -11,6 +11,8 @@
 
   padding: 0 15px;
   font-family: Merriweather;
+
+  border: 1px solid red;
 }
 
 .title {
@@ -40,6 +42,15 @@
 .link:focus {
   color: #534b42;
   font-weight: 600;
+}
+
+.possibilityWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border: 1px solid rgb(0, 255, 119);
 }
 
 /* Theme */

@@ -84,26 +84,29 @@ const AppBar = () => {
             </li>
           </ul>
         </nav>
-        <ChangeLanguage />
-        {theme === "light" ? (
-          <button
-            className={`${css.themeBtn} ${
-              theme === "light" ? css.light : css.dark
-            }`}
-            onClick={toggleTheme}
-          >
-            <NightsStayIcon className={css.themeIconDark} />
-          </button>
-        ) : (
-          <button
-            className={`${css.themeBtn} ${
-              theme === "light" ? css.light : css.dark
-            }`}
-            onClick={toggleTheme}
-          >
-            <LightModeIcon className={css.themeIconLight} />
-          </button>
-        )}
+        <div className={css.possibilityWrap}>
+          <ChangeLanguage />
+
+          {theme === "light" ? (
+            <button
+              className={`${css.themeBtn} ${
+                theme === "light" ? css.light : css.dark
+              }`}
+              onClick={toggleTheme}
+            >
+              <NightsStayIcon className={css.themeIconDark} />
+            </button>
+          ) : (
+            <button
+              className={`${css.themeBtn} ${
+                theme === "light" ? css.light : css.dark
+              }`}
+              onClick={toggleTheme}
+            >
+              <LightModeIcon className={css.themeIconLight} />
+            </button>
+          )}
+        </div>
       </div>
     </header>
   );
