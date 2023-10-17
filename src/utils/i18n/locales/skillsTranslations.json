@@ -1,0 +1,62 @@
+[
+  {
+    "en": {
+      "key": "HTML5/CSS3/SASS Responsive Design:",
+      "value": "Skilled in creating responsive web designs using HTML5, CSS3, and SASS for various devices."
+    },
+    "ua": {
+      "key": "HTML5/CSS3/SASS адаптивний дизайн:",
+      "value": "Володію навичками створення адаптивних веб-дизайнів з використанням HTML5, CSS3 та SASS для різних пристроїв."
+    }
+  },
+  {
+    "en": {
+      "key": "JavaScript/TypeScript:",
+      "value": "Proficient in JavaScript and TypeScript for dynamic web development."
+    },
+    "ua": {
+      "key": "JavaScript/TypeScript:",
+      "value": "Володію JavaScript та TypeScript для динамічної веб-розробки."
+    }
+  },
+  {
+    "en": {
+      "key": "React/Redux:",
+      "value": "Experienced in building user interfaces with React and state management using Redux."
+    },
+    "ua": {
+      "key": "React/Redux:",
+      "value": "Маю досвід у створенні інтерфейсів користувача за допомогою React та управління станом за допомогою Redux."
+    }
+  },
+  {
+    "en": {
+      "key": "React Native:",
+      "value": "Proficient in developing cross-platform mobile applications using React Native."
+    },
+    "ua": {
+      "key": "React Native:",
+      "value": "Володію навичками розробки крос-платформових мобільних додатків за допомогою React Native."
+    }
+  },
+  {
+    "en": {
+      "key": "Backend:",
+      "value": "Knowledge of Node.js for server-side development."
+    },
+    "ua": {
+      "key": "Backend:",
+      "value": "Знання Node.js для розробки на серверній стороні."
+    }
+  },
+  {
+    "en": {
+      "key": "Database:",
+      "value": "Familiarity with MongoDB for data storage."
+    },
+    "ua": {
+      "key": "Бази даних:",
+      "value": "Знайомство з MongoDB для зберігання даних."
+    }
+  }
+]

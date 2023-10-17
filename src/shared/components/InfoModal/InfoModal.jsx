@@ -31,6 +31,7 @@ export default function CardDetailsModal({
   linkTitle,
   content,
   linkDenotation,
+  closeBtn
 }) {
   const [open, setOpen] = useState(false);
   const { theme } = useContext(ThemeContext);
@@ -117,7 +118,8 @@ export default function CardDetailsModal({
               theme === "light" ? css.light : css.dark
             }`}
           >
-            Close
+            {closeBtn}
+         
           </button>
         </DialogActions>
       </BootstrapDialog>

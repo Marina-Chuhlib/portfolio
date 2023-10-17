@@ -8,8 +8,9 @@
   background-color: #e1d8ce;
   border: none;
   border-radius: 5px;
-  padding: 15px;
+  padding: 5px;
   height: 32px;
+  height: fit-content;
   color: #8c857e;
   font-family: Merriweather;
   font-weight: 700;

@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../shared/theme/ThemeProvider";
 
 import image from "../../images/image.png";
@@ -7,6 +8,7 @@ import css from "./main.module.css";
 
 const Main = () => {
   const { theme } = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   return (
     <section
@@ -16,10 +18,7 @@ const Main = () => {
         <div className={css.thumb}>
           <img src={image} alt="picture" width="200" className={css.photo} />
         </div>
-        <h1 className={css.title}>
-          Hello, I'm a frontend developer. I create interfaces for web
-          applications.
-        </h1>
+        <h1 className={css.title}>{t("mainText")}</h1>
       </div>
     </section>
   );

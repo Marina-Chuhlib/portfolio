@@ -11,7 +11,12 @@ import cv from "../../../images/marina-chukhlib-cv.pdf";
 
 import css from "./modalConfirm.module.css";
 
-export default function ModalConfirm() {
+export default function ModalConfirm({
+  denotation,
+  confirmText,
+  disagreeBtnText,
+  agreeBtnText,
+}) {
   const [open, setOpen] = React.useState(false);
   const [confirm, setConfirm] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -37,7 +42,7 @@ export default function ModalConfirm() {
         onClick={handleClickOpen}
         className={`${css.openBtn} ${theme === "light" ? css.light : css.dark}`}
       >
-        Show CV
+        {denotation}
       </button>
       <Dialog
         open={open}
@@ -48,7 +53,7 @@ export default function ModalConfirm() {
           className={`${css.modal} ${theme === "light" ? css.light : css.dark}`}
         >
           <DialogContentText id="alert-dialog-description" className={css.text}>
-            Are you sure want to view the resume?
+            {confirmText}
           </DialogContentText>
         </DialogContent>
         <DialogActions
@@ -57,13 +62,13 @@ export default function ModalConfirm() {
           }`}
         >
           <button className={css.btnAlert} onClick={handleClose}>
-            Disagree
+            {disagreeBtnText}
           </button>
           <button
             className={`${css.btnAlert} ${css.agree}`}
             onClick={handleConfirm}
           >
-            Agree
+            {agreeBtnText}
           </button>
         </DialogActions>
       </Dialog>

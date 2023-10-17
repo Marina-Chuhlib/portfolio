@@ -4,10 +4,14 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import NightsStayIcon from "@mui/icons-material/NightsStay";
 import { ThemeContext } from "../../shared/theme/ThemeProvider";
 
+import ChangeLanguage from "../../shared/components/ChangeLanguage/ChangeLanguage";
+import { useTranslation } from "react-i18next";
+
 import css from "./appBar.module.css";
 
 const AppBar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const links = document.querySelectorAll('a[href^="#"]');
@@ -44,7 +48,7 @@ const AppBar = () => {
           className={`${css.title} ${theme === "light" ? css.light : css.dark}`}
           href="#about"
         >
-          Marina
+          {t("name")}
         </a>
         <nav>
           <ul className={css.list}>
@@ -55,7 +59,7 @@ const AppBar = () => {
                   theme === "light" ? css.light : css.dark
                 }`}
               >
-                About
+                {t("about")}
               </a>
             </li>
             <li className={css.item}>
@@ -65,7 +69,7 @@ const AppBar = () => {
                   theme === "light" ? css.light : css.dark
                 }`}
               >
-                Portfolio
+                {t("portfolio")}
               </a>
             </li>
             <li className={css.item}>
@@ -75,11 +79,12 @@ const AppBar = () => {
                   theme === "light" ? css.light : css.dark
                 }`}
               >
-                Contact
+                {t("contact")}
               </a>
             </li>
           </ul>
         </nav>
+        <ChangeLanguage />
         {theme === "light" ? (
           <button
             className={`${css.themeBtn} ${
