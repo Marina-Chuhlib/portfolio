@@ -17,9 +17,9 @@ export default function ModalConfirm({
   disagreeBtnText,
   agreeBtnText,
 }) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const [confirm, setConfirm] = useState(false);
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   const handleClickOpen = () => {
     setOpen(true);

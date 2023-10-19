@@ -26,6 +26,7 @@ const About = () => {
             {t("aboutTitle")}
           </h2>
           <p className={css.content}>{t("aboutContent")}</p>
+
           <ModalConfirm
             className={css.modal}
             denotation={t("showCvBtn")}
