@@ -11,7 +11,7 @@ import cv from "../../../images/marina-chukhlib-cv.pdf";
 
 import css from "./modalConfirm.module.css";
 
-export default function ModalConfirm({
+function ModalConfirm({
   denotation,
   confirmText,
   disagreeBtnText,
@@ -75,3 +75,5 @@ export default function ModalConfirm({
     </div>
   );
 }
+
+export default ModalConfirm
