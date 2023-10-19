@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 
 import { useTranslation } from "react-i18next";
-
-import ModalConfirm from "../../shared/components/ModalConfirm/ModalConfirm.jsx";
-
 import { ThemeContext } from "../../shared/theme/ThemeProvider";
+import ModalConfirm from "../../../src/shared/components/ModalConfirm/ModalConfirm";
+
 
 import Skills from "./Skills/Skills";
 
