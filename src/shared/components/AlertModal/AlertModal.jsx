@@ -9,9 +9,9 @@ import { ThemeContext } from "../../theme/ThemeProvider";
 
 import cv from "../../../images/marina-chukhlib-cv.pdf";
 
-import css from "./modalConfirm.module.css";
+import css from "./alertModal.module.css";
 
-function ModalConfirm({
+function AlertModal({
   denotation,
   confirmText,
   disagreeBtnText,
@@ -76,4 +76,4 @@ function ModalConfirm({
   );
 }
 
-export default ModalConfirm
+export default AlertModal

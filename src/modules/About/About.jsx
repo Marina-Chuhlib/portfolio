@@ -3,7 +3,8 @@ import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../shared/theme/ThemeProvider";
 
-import ModalConfirm from "../../shared/components/ModalConfirm/ModalConfirm"
+
+import AlertModal from "../../shared/components/AlertModal/AlertModal";
 
 
 import Skills from "./Skills/Skills";
@@ -27,7 +28,7 @@ const About = () => {
           </h2>
           <p className={css.content}>{t("aboutContent")}</p>
 
-          <ModalConfirm
+          <AlertModal
             className={css.modal}
             denotation={t("showCvBtn")}
             confirmText={t("confirmText")}
