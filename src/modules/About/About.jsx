@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 
 import { useTranslation } from "react-i18next";
+
 import ModalConfirm from "../../shared/components/ModalConfirm/ModalConfirm";
 import InfoModal from "../../shared/components/InfoModal/InfoModal";
 import { ThemeContext } from "../../shared/theme/ThemeProvider";
