@@ -1,6 +1,8 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../theme/ThemeProvider";
 import i18n from "../../../utils/i18n/config";
 
-import css from "./changeLanguage.module.css"
+import css from "./changeLanguage.module.css";
 
 const options = [
   {
@@ -14,6 +16,8 @@ const options = [
 ];
 
 const ChangeLanguage = () => {
+  const { theme } = useContext(ThemeContext);
+
   function changeLanguage(e) {
     const currentLng = e.target.value;
     localStorage.setItem("language", currentLng);
@@ -25,8 +29,14 @@ const ChangeLanguage = () => {
   const language = localStorage.getItem("language");
 
   return (
-    <div>
-      <select value={language || "en"} onChange={changeLanguage} className={css.wrapper}>
+    <div
+      className={`${css.container} ${theme === "light" ? css.light : css.dark} ${language === "ua" ? css.ua : ""}`}
+    >
+      <select
+        value={language || "en"}
+        onChange={changeLanguage}
+        className={css.wrapper}
+      >
         {options.map((option, idx) => (
           <option key={idx} value={option.value}>
             {option.label}

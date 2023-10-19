@@ -1,16 +1,15 @@
 import { useEffect, useContext } from "react";
-
-import LightModeIcon from "@mui/icons-material/LightMode";
-import NightsStayIcon from "@mui/icons-material/NightsStay";
+import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../shared/theme/ThemeProvider";
 
 import ChangeLanguage from "../../shared/components/ChangeLanguage/ChangeLanguage";
-import { useTranslation } from "react-i18next";
+import ChangeTheme from "../../shared/components/ChangeTheme/ChangeTheme";
+
 
 import css from "./appBar.module.css";
 
 const AppBar = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -86,26 +85,7 @@ const AppBar = () => {
         </nav>
         <div className={css.possibilityWrap}>
           <ChangeLanguage />
-
-          {theme === "light" ? (
-            <button
-              className={`${css.themeBtn} ${
-                theme === "light" ? css.light : css.dark
-              }`}
-              onClick={toggleTheme}
-            >
-              <NightsStayIcon className={css.themeIconDark} />
-            </button>
-          ) : (
-            <button
-              className={`${css.themeBtn} ${
-                theme === "light" ? css.light : css.dark
-              }`}
-              onClick={toggleTheme}
-            >
-              <LightModeIcon className={css.themeIconLight} />
-            </button>
-          )}
+          <ChangeTheme />
         </div>
       </div>
     </header>

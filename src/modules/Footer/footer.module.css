@@ -28,6 +28,8 @@
 
 .decor {
   color: #a06056;
+
+  margin-right: 4px;
 }
 
 .link {
@@ -132,5 +134,10 @@
   .listWrapper,
   .link {
     display: block;
+  }
+
+  .decor,
+  .link {
+    font-size: 16px;
   }
 }

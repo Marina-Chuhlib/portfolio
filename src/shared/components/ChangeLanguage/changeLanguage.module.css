@@ -2,16 +2,56 @@
   border: none;
   cursor: pointer;
   background-color: transparent;
-
-  color: #aaa5a0;
+  color: #26498e;
   font-size: 18px;
-}
+  font-family: Merriweather;
+  font-weight: 700;
 
-.wrapper:focus {
-  outline: none;
+  border-radius: 5px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .wrapper:hover {
-  color: #e6ecc1;
-  box-shadow: 0 10px 5px -5px #e6ecc1;
+  color: #1b106e;
+
+  background-image: url("../../../images//Flag-SShA.png");
+  background-size: contain;
+}
+
+.container.ua .wrapper:hover {
+  color: #f0f8ff;
+  background: -webkit-linear-gradient(
+    180deg,
+    rgb(56, 27, 227) 50%,
+    rgb(216, 210, 13) 50%
+  );
+  background: -moz-linear-gradient(
+    180deg,
+    rgb(56, 27, 227) 50%,
+    rgb(216, 210, 13) 50%
+  );
+  background: linear-gradient(
+    180deg,
+    rgb(56, 27, 227) 50%,
+    rgb(216, 210, 13) 50%
+  );
+}
+
+/* === */
+
+.container.dark .wrapper {
+  color: #aaa5a0;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.container.dark .wrapper:hover {
+  color: #1b106e;
+}
+
+.container.dark.container.ua .wrapper:hover {
+  color: #f0f8ff;
 }
