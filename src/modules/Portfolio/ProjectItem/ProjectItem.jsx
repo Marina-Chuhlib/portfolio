@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { useTranslation } from "react-i18next";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
@@ -64,6 +65,17 @@ const ProjectItem = ({
       </div>
     </li>
   );
+};
+
+ProjectItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired,
+  linkTitle: PropTypes.string.isRequired,
+  gitHubLink: PropTypes.string.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
 export default ProjectItem;

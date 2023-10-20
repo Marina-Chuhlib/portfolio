@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
@@ -24,14 +25,14 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
-export default function CardDetailsModal({
+export default function InfoModal({
   denotation,
   title,
   link,
   linkTitle,
   content,
   linkDenotation,
-  closeBtn
+  closeBtn,
 }) {
   const [open, setOpen] = useState(false);
   const { theme } = useContext(ThemeContext);
@@ -119,10 +120,19 @@ export default function CardDetailsModal({
             }`}
           >
             {closeBtn}
-         
           </button>
         </DialogActions>
       </BootstrapDialog>
     </div>
   );
 }
+
+InfoModal.propTypes = {
+  denotation: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired,
+  linkDenotation: PropTypes.string,
+  link: PropTypes.string,
+  linkTitle: PropTypes.string,
+  closeBtn: PropTypes.string.isRequired,
+};

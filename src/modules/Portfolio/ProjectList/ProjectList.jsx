@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { useTranslation } from "react-i18next";
 
 import ProjectItem from "../ProjectItem/ProjectItem";
@@ -89,6 +90,10 @@ const ProjectList = ({ theme }) => {
       ))}
     </ul>
   );
+};
+
+ProjectList.propTypes = {
+  theme: PropTypes.string.isRequired,
 };
 
 export default ProjectList;

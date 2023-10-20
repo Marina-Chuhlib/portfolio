@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState, useContext } from "react";
+import PropTypes from "prop-types";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -76,4 +77,13 @@ function AlertModal({
   );
 }
 
-export default AlertModal
+AlertModal.propTypes = {
+  denotation: PropTypes.string.isRequired,
+  confirmText: PropTypes.string.isRequired,
+  disagreeBtnText: PropTypes.string.isRequired,
+  agreeBtnText: PropTypes.string.isRequired,
+};
+
+export default AlertModal;
+
+

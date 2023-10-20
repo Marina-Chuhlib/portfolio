@@ -3,9 +3,7 @@ import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../shared/theme/ThemeProvider";
 
-
 import AlertModal from "../../shared/components/AlertModal/AlertModal";
-
 
 import Skills from "./Skills/Skills";
 
