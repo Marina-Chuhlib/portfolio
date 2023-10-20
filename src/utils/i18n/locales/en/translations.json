@@ -21,7 +21,7 @@
   "yourPetContent": "An adaptive application for posting pet ads, whether for selling giving them to good homes, or searching for lost pets. The project includes user registration and personal account management, allowing users to create and manage pet information cards. Notably, the website supports bilingual content and offers both light and dark themes for user preference.",
   "yourPetTechnologies": "Tools and technologies used: HTML, CSS, JavaScript, React, Redux Toolkit, Node.js, Express, MongoDB, Axios, Material-UI, Formik. Role: Team leader.",
 
-  "FilmotekaText": "An adaptive application for choosing movies and saving them to own user lists. I created the modal window with information about the selected movie.",
+  "FilmotekaText": "Single page application. An adaptive application for choosing movies and saving them to own user lists. I created the modal window with information about the selected movie.",
   "FilmotekaContent": "The website is a movie library application that allows users to search for movies by title and manage their watched and favorite films. It's a user-friendly movie library application for movie enthusiasts to keep track of their film collection and discover new titles.",
   "FilmotekaTechnologies": "The website was built using HTML/CSS for structuring and styling, JavaScript for interactivity and functionality, a REST API to fetch movie data, AJAX for managing asynchronous data requests, and Parcel as a bundler to handle project assets and resources. Role: Developer.",
 
@@ -29,7 +29,7 @@
   "icecreamContent": "An ice cream shop website featuring a responsive design that adapts seamlessly to various screen sizes, ensuring an optimal user experience on both desktop and mobile devices. The website boasts a visually appealing design with animated elements that enhance its aesthetic appeal. It includes a convenient burger menu for easy  navigation, allowing customers to explore the menu and find their favorite ice cream flavors effortlessly. Additionally, a modal window provides an interactive experience, enabling customers to view detailed information about each ice cream flavor and make informed choices. This website combines functionality, visual appeal, and user-friendly features to create an enticing online presence for the ice cream shop.",
   "icecreamTechnologies": "Technologies used include HTML, SASS, JavaScript, and Parcel. Role: Developer.",
 
-  "webStudioText": "The website with a responsive layout, modal window, and attractive design.",
+  "webStudioText": "Multi page application. The website with a responsive layout, modal window, and attractive design.",
   "webStudioContent": "The website not only looks great but also functions smoothly. It offers seamless navigation, quick load times, and an intuitive user interface. The design and layout of the site are aimed at delivering an engaging user experience. It encourages visitors to explore the site and access relevant information effortlessly. The website serves as a showcase of the web studio's work, highlighting their portfolio, services, and expertise.",
   "webStudioTechnologies": "In terms of the technologies used, the website is built with HTML, SASS (a CSS preprocessor), JavaScript (for interactivity), and Parcel (a project bundler). These technologies are commonly used to create modern and responsive web applications. Role: Developer.",
 
