@@ -16,27 +16,15 @@
 .wrapper:hover {
   color: #1b106e;
 
-  background-image: url("../../../images//Flag-SShA.png");
+  background-image: url("../../../images/flag-usa.png");
   background-size: contain;
 }
 
 .container.ua .wrapper:hover {
   color: #f0f8ff;
-  background: -webkit-linear-gradient(
-    180deg,
-    rgb(56, 27, 227) 50%,
-    rgb(216, 210, 13) 50%
-  );
-  background: -moz-linear-gradient(
-    180deg,
-    rgb(56, 27, 227) 50%,
-    rgb(216, 210, 13) 50%
-  );
-  background: linear-gradient(
-    180deg,
-    rgb(56, 27, 227) 50%,
-    rgb(216, 210, 13) 50%
-  );
+  background-image: url("../../../images/flag-ua.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* === */
