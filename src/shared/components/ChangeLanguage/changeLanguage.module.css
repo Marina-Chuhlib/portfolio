@@ -17,7 +17,8 @@
   color: #1b106e;
 
   background-image: url("../../../images/flag-usa.png");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container.ua .wrapper:hover {
