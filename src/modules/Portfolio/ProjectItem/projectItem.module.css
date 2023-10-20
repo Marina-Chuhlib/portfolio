@@ -78,13 +78,16 @@
   color: #f4f4f4;
   border: none;
   background: #534b42;
-  font-family: Karla;
-  font-size: 17px;
+  font-family: "Karla";
+  font-size: 16px;
   border-radius: 5px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .link:hover,
@@ -155,7 +158,8 @@
   }
 
   .link {
-    height: fit-content;
+    height: 44px;
     width: 90px;
+    font-size: 14px;
   }
 }

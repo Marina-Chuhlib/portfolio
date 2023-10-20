@@ -7,7 +7,7 @@
   display: flex;
   width: fit-content;
   align-items: center;
-  font-family: Karla;
+  font-family: "Karla";
   font-weight: 700;
   color: #a06056;
   font-size: 22px;
@@ -23,9 +23,9 @@
   border: none;
   background: #534b42;
   color: #f4f4f4;
-  font-family: Karla;
-  font-size: 17px;
-  height: fit-content;
+  font-family: "Karla";
+  font-size: 16px;
+  height: 32px;
   width: 115px;
   padding: 6px;
 
@@ -69,6 +69,9 @@
   .button {
     height: 44px;
     width: 90px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 14px;
 
     display: flex;
     align-items: center;
