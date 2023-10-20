@@ -82,8 +82,22 @@
   }
 
   .list {
+    margin: 12px 0;
+    display: flex;
+
+    gap: 8px;
+  }
+
+  .item {
+    font-size: 16px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
+  }
+
+  .link {
+    padding: 4px;
   }
 }
 
