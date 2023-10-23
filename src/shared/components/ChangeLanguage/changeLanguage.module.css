@@ -13,8 +13,10 @@
     background 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-.wrapper:hover {
+.wrapper:hover,
+.wrapper:focus {
   color: #1b106e;
+  outline: none;
 
   background-image: url("../../../images/flag-usa.png");
   background-size: cover;
@@ -22,8 +24,11 @@
   background-position: center;
 }
 
-.container.ua .wrapper:hover {
+.container.ua .wrapper:hover,
+.container.ua .wrapper:focus {
   color: #f0f8ff;
+  outline: none;
+
   background-image: url("../../../images/flag-ua.png");
   background-size: cover;
   background-position: center;
@@ -39,10 +44,12 @@
     background 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-.container.dark .wrapper:hover {
+.container.dark .wrapper:hover,
+.container.dark .wrapper:focus {
   color: #1b106e;
 }
 
-.container.dark.container.ua .wrapper:hover {
+.container.dark.container.ua .wrapper:hover,
+.container.dark.container.ua .wrapper:focus {
   color: #f0f8ff;
 }
