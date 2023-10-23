@@ -38,6 +38,7 @@ const ScrollButton = () => {
   return (
     <div style={{ opacity: isVisible ? 1 : 0 }} className={css.scroll}>
       <button
+        type="button"
         onClick={scrollToTop}
         className={`${css.btnScroll} ${
           theme === "light" ? css.light : css.dark

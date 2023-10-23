@@ -13,7 +13,7 @@ const ChangeTheme = () => {
   return (
     <>
       {theme === "light" ? (
-        <button
+        <button type="button"
           className={`${css.themeBtn} ${
             theme === "light" ? css.light : css.dark
           }`}
@@ -22,7 +22,7 @@ const ChangeTheme = () => {
           <NightsStayIcon className={css.themeIconDark} />
         </button>
       ) : (
-        <button
+        <button type="button"
           className={`${css.themeBtn} ${
             theme === "light" ? css.light : css.dark
           }`}

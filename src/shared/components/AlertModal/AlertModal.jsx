@@ -40,6 +40,7 @@ function AlertModal({
   return (
     <div className={css.modalWrap}>
       <button
+        type="button"
         onClick={handleClickOpen}
         className={`${css.openBtn} ${theme === "light" ? css.light : css.dark}`}
       >
@@ -62,10 +63,11 @@ function AlertModal({
             theme === "light" ? css.light : css.dark
           }`}
         >
-          <button className={css.btnAlert} onClick={handleClose}>
+          <button type="button" className={css.btnAlert} onClick={handleClose}>
             {disagreeBtnText}
           </button>
           <button
+            type="button"
             className={`${css.btnAlert} ${css.agree}`}
             onClick={handleConfirm}
           >
@@ -85,5 +87,3 @@ AlertModal.propTypes = {
 };
 
 export default AlertModal;
-
-

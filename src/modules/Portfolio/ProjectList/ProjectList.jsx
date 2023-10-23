@@ -1,9 +1,10 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 
 import ProjectItem from "../ProjectItem/ProjectItem";
 import yourPet from "../../../images/yourPet.png";
+import phoneBook from "../../../images/phoneBook.png";
 import filmoteka from "../../../images/filmoteka.png";
 import icecream from "../../../images/icecream.png";
 import webStudio from "../../../images/webStudio.png";
@@ -29,6 +30,21 @@ const ProjectList = ({ theme }) => {
       gitHubLink: "https://github.com/Marina-Chuhlib/YourPet-FrontEnd",
     },
     {
+      title: "Phone Book",
+      link: "https://marina-chuhlib.github.io/goit-react-hw-08-phonebook/",
+      image: phoneBook,
+      text: t("phoneBookText"),
+      content: (
+        <>
+          <p className={css.content}>{t("phoneBookContent")}</p>
+          <p className={css.content}>{t("phoneBookTechnologies")}</p>
+        </>
+      ),
+      linkTitle: "Phone Book",
+      gitHubLink:
+        "https://github.com/Marina-Chuhlib/goit-react-hw-08-phonebook",
+    },
+    {
       title: "Filmoteka",
       link: "https://olenateplodar.github.io/team-project-movie-library/",
       image: filmoteka,
@@ -39,7 +55,7 @@ const ProjectList = ({ theme }) => {
           <p className={css.content}>{t("FilmotekaTechnologies")}</p>
         </>
       ),
-      linkTitle: "Web Studio",
+      linkTitle: "Filmoteka",
       gitHubLink:
         "https://github.com/Marina-Chuhlib/team-project-movie-library",
     },
