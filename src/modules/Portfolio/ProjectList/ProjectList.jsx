@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import ProjectItem from "../ProjectItem/ProjectItem";
 import yourPet from "../../../images/yourPet.png";
 import phoneBook from "../../../images/phoneBook.png";
+import todoList from "../../../images/todo-list.png"
 import filmoteka from "../../../images/filmoteka.png";
 import icecream from "../../../images/icecream.png";
 import webStudio from "../../../images/webStudio.png";
@@ -29,7 +30,8 @@ const ProjectList = ({ theme }) => {
       linkTitle: "Your Pet",
       gitHubLink: "https://github.com/Marina-Chuhlib/YourPet-FrontEnd",
     },
-    {
+
+        {
       title: "Phone Book",
       link: "https://marina-chuhlib.github.io/goit-react-hw-08-phonebook/",
       image: phoneBook,
@@ -43,6 +45,21 @@ const ProjectList = ({ theme }) => {
       linkTitle: "Phone Book",
       gitHubLink:
         "https://github.com/Marina-Chuhlib/goit-react-hw-08-phonebook",
+    },
+        {
+      title: "To Do List",
+      link: "https://marina-chuhlib.github.io/todo-list-typescript",
+      image: todoList,
+      text: t("toDoList"),
+      content: (
+        <>
+          <p className={css.content}>{t("toDoListContent")}</p>
+          <p className={css.content}>{t("toDoListTechnologies")}</p>
+        </>
+      ),
+      linkTitle: "To Do List",
+      gitHubLink:
+        "https://github.com/Marina-Chuhlib/todo-list-typescript",
     },
     {
       title: "Filmoteka",
