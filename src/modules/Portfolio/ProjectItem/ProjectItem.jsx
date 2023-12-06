@@ -1,12 +1,11 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 import InfoModal from "../../../shared/components/InfoModal/InfoModal";
 
 import css from "./projectItem.module.css";
-
 
 const ProjectItem = ({
   title,
@@ -15,7 +14,6 @@ const ProjectItem = ({
   text,
   content,
   linkTitle,
-  gitHubLink,
   theme,
 }) => {
   const { t } = useTranslation();
@@ -52,15 +50,6 @@ const ProjectItem = ({
           className={css.link}
         >
           {t("visitBtn")}
-        </a>
-        <a
-          href={gitHubLink}
-          target="_blank"
-          rel="noreferrer noopener"
-          title={`GitHub ${title}`}
-          className={css.icon}
-        >
-          <GitHubIcon fontSize="large" />
         </a>
       </div>
     </li>

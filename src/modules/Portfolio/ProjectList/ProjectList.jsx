@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import ProjectItem from "../ProjectItem/ProjectItem";
 import yourPet from "../../../images/yourPet.png";
 import phoneBook from "../../../images/phoneBook.png";
-import todoList from "../../../images/todo-list.png"
+import todoList from "../../../images/todo-list.png";
 import filmoteka from "../../../images/filmoteka.png";
 import icecream from "../../../images/icecream.png";
 import webStudio from "../../../images/webStudio.png";
@@ -17,8 +17,8 @@ const ProjectList = ({ theme }) => {
 
   const projectData = [
     {
-      title: "Your Pet",
-      link: "https://marina-chuhlib.github.io/goit-markup-hw-08/",
+      title: "Pet Care",
+      link: "https://marina-chuhlib.github.io/YourPet-FrontEnd/",
       image: yourPet,
       text: t("yourPetCardText"),
       content: (
@@ -27,12 +27,11 @@ const ProjectList = ({ theme }) => {
           <p className={css.content}>{t("yourPetTechnologies")}</p>
         </>
       ),
-      linkTitle: "Your Pet",
-      gitHubLink: "https://github.com/Marina-Chuhlib/YourPet-FrontEnd",
+      linkTitle: "Pet Care",
     },
 
-        {
-      title: "Phone Book",
+    {
+      title: "Digital Phone List",
       link: "https://marina-chuhlib.github.io/goit-react-hw-08-phonebook/",
       image: phoneBook,
       text: t("phoneBookText"),
@@ -42,11 +41,9 @@ const ProjectList = ({ theme }) => {
           <p className={css.content}>{t("phoneBookTechnologies")}</p>
         </>
       ),
-      linkTitle: "Phone Book",
-      gitHubLink:
-        "https://github.com/Marina-Chuhlib/goit-react-hw-08-phonebook",
+      linkTitle: "Digital Phone List",
     },
-        {
+    {
       title: "To Do List",
       link: "https://marina-chuhlib.github.io/todo-list-typescript",
       image: todoList,
@@ -58,11 +55,9 @@ const ProjectList = ({ theme }) => {
         </>
       ),
       linkTitle: "To Do List",
-      gitHubLink:
-        "https://github.com/Marina-Chuhlib/todo-list-typescript",
     },
     {
-      title: "Filmoteka",
+      title: "World Cinema Premieres",
       link: "https://olenateplodar.github.io/team-project-movie-library/",
       image: filmoteka,
       text: t("FilmotekaText"),
@@ -72,12 +67,10 @@ const ProjectList = ({ theme }) => {
           <p className={css.content}>{t("FilmotekaTechnologies")}</p>
         </>
       ),
-      linkTitle: "Filmoteka",
-      gitHubLink:
-        "https://github.com/Marina-Chuhlib/team-project-movie-library",
+      linkTitle: "World Cinema Premieres",
     },
     {
-      title: "ICE CREAM",
+      title: "Ice Cream World",
       link: "https://nordmi.github.io/ITFly/",
       image: icecream,
       text: t("icecreamText"),
@@ -87,11 +80,10 @@ const ProjectList = ({ theme }) => {
           <p className={css.content}>{t("icecreamTechnologies")}</p>
         </>
       ),
-      linkTitle: "Ice cream",
-      gitHubLink: "https://github.com/Marina-Chuhlib/ITFly",
+      linkTitle: "Ice Cream World",
     },
     {
-      title: "Web Studio",
+      title: "Web Design Workshop",
       link: "https://marina-chuhlib.github.io/goit-markup-hw-08/",
       image: webStudio,
       text: t("webStudioText"),
@@ -101,8 +93,7 @@ const ProjectList = ({ theme }) => {
           <p className={css.content}>{t("webStudioTechnologies")}</p>
         </>
       ),
-      linkTitle: "Web Studio",
-      gitHubLink: "https://github.com/Marina-Chuhlib/goit-markup-hw-08",
+      linkTitle: "Web Design Workshop",
     },
   ];
 
