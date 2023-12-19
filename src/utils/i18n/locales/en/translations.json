@@ -5,7 +5,7 @@
   "contact": "Contact",
   "mainText": "Hello, I'm a frontend developer. I create interfaces for web applications.",
   "aboutTitle": "About Me",
-  "aboutContent": "I'm a Marina Chukhlib junior frontend developer with proficiency in HTML, CSS, JavaScript, React, and Node.js. I'm passionate about creating attractive and user-friendly web interfaces, and I'm eager to learn and grow in the field of web development.",
+  "aboutContent": "I'm Marina Chukhlib, a junior Full Stack developer with a focus on Frontend technologies. I possess skills in HTML, CSS, JavaScript, React, Node.js, and TypeScript. My passion lies in creating appealing and user-friendly web interfaces, and I'm driven by a constant desire to learn and advance in the ever-evolving field of web development. I believe in the power of technology to transform our lives and am always ready to contribute to projects that make the web world brighter and more accessible for everyone.",
   "showCvBtn": "Show CV",
   "confirmText": "Are you sure want to view the resume?",
   "disagreeBtnText": "Disagree",
@@ -14,8 +14,12 @@
   "skillsBtn": "More details",
   "certificateTitle": "Certificate",
   "closeBtn": "Close",
-  "projectTitle": "Project",
+  "projectTitle": "Projects",
   "portfolioText": "In this section, you can explore my individual and collaborative group projects",
+
+  "ecosolutionCardText": "Ecosolution is an adaptive and accessible landing page dedicated to promoting and advancing renewable energy solutions for a cleaner and more sustainable future.",
+  "ecosolutionContent": "The website is designed with adaptability in mind, ensuring a smooth user experience on various devices, including mobile phones and tablets. The site features a convenient burger menu for easy navigation, engaging carousel slides, and an organized FAQ section with a dropdown list. Additionally, a user-friendly form is available for inquiries and communication.",
+  "ecosolutionTechnologies": "Tools and technologies used: HTML, CSS, JavaScript, React, Material-UI.",
 
   "yourPetCardText": "An application for posting pet ads, including lost pets and those looking for new homes, with user registration and personal pet information card creation.",
   "yourPetContent": "An adaptive application for posting pet ads, whether for selling giving them to good homes, or searching for lost pets. The project includes user registration and personal account management, allowing users to create and manage pet information cards. Notably, the website supports bilingual content and offers both light and dark themes for user preference.",

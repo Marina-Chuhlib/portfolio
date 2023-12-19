@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
-import GitHubIcon from "@mui/icons-material/GitHub";
 
 import InfoModal from "../../../shared/components/InfoModal/InfoModal";
 
@@ -28,7 +27,8 @@ const ProjectItem = ({
           title={`Visit ${title}`}
         >
           <h3 className={css.caption}>{title}</h3>
-          <img src={image} alt={title} width={300} className={css.photo} />
+          <div className={css.photoThumb}> <img src={image} alt={title} width={300} className={css.photo} /></div>
+         
         </a>
       </div>
       <p className={css.cardText}>{text}</p>
