@@ -41,6 +41,16 @@
   },
   {
     "en": {
+      "key": "API & WebSocket Communication:",
+      "value": "Experienced in working with REST API and real-time communication using Socket.IO."
+    },
+    "ua": {
+      "key": "API та комунікація через WebSocket:",
+      "value": "Маю досвід роботи з REST API та реальним зв'язком через Socket.IO."
+    }
+  },
+  {
+    "en": {
       "key": "Backend:",
       "value": "Knowledge of Node.js for server-side development."
     },
