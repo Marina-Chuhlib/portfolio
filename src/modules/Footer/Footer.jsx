@@ -27,9 +27,9 @@ const Footer = () => {
         <div className={css.listWrapper}>
           <ul className={css.contactList}>
             <li className={css.item}>
-              <a href="tel:+905312993731" className={css.link}>
+              <a href="tel:+380932796086" className={css.link}>
                 <span className={css.decor}>{t("phone")} </span>
-                +90-531-299-37-31
+                +38-093-279-60-86
               </a>
             </li>
             <li className={css.item}>
