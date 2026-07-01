@@ -5,7 +5,6 @@ import { ThemeContext } from "../../shared/theme/ThemeProvider";
 import ChangeLanguage from "../../shared/components/ChangeLanguage/ChangeLanguage";
 import ChangeTheme from "../../shared/components/ChangeTheme/ChangeTheme";
 
-
 import css from "./appBar.module.css";
 
 const AppBar = () => {
@@ -15,16 +14,20 @@ const AppBar = () => {
   useEffect(() => {
     const links = document.querySelectorAll('a[href^="#"]');
 
-    const clickHandler = (e) => {
+    const clickHandler = (e: Event) => {
       e.preventDefault();
-      const href = e.target.getAttribute("href");
-      const target = document.querySelector(href);
-      const offsetTop = target.offsetTop - 30;
+      const link = e.currentTarget as HTMLAnchorElement;
+      const href = link.getAttribute("href");
+      const target = href ? document.querySelector(href) : null;
+      const headerHeight = document.querySelector("header")?.offsetHeight ?? 92;
+      const offsetTop = target
+        ? target.getBoundingClientRect().top +
+          window.scrollY -
+          headerHeight -
+          24
+        : 0;
 
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
     };
 
     links.forEach((link) => {

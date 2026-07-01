@@ -12,10 +12,11 @@ const Portfolio = () => {
 
   return (
     <section
+      id="portfolio"
       className={`${css.container} ${theme === "light" ? css.light : css.dark}`}
     >
       <div className={css.sectionWrapper}>
-        <h2 className={css.title} id="portfolio">
+        <h2 className={css.title}>
           {t("projectTitle")}
         </h2>
         <p className={css.text}>{t("portfolioText")}</p>

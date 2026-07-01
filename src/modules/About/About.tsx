@@ -17,11 +17,12 @@ const About = () => {
 
   return (
     <section
+      id="about"
       className={`${css.container} ${theme === "light" ? css.light : css.dark}`}
     >
       <div className={css.wrapper}>
         <div className={css.contentWrapper}>
-          <h2 className={css.title} id="about">
+          <h2 className={css.title}>
             {t("aboutTitle")}
           </h2>
           <p className={css.content}>{t("aboutContent")}</p>

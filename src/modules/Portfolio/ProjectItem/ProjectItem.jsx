@@ -27,8 +27,7 @@ const ProjectItem = ({
           title={`Visit ${title}`}
         >
           <h3 className={css.caption}>{title}</h3>
-          <div className={css.photoThumb}> <img src={image} alt={title} width={300} className={css.photo} /></div>
-         
+          <img src={image} alt={title} width={300} className={css.photo} />
         </a>
       </div>
       <p className={css.cardText}>{text}</p>
@@ -47,24 +46,13 @@ const ProjectItem = ({
           target="_blank"
           rel="noreferrer noopener"
           title={title}
-          className={css.link}
+          className={`${css.link} ${theme === "light" ? css.light : css.dark}`}
         >
           {t("visitBtn")}
         </a>
       </div>
     </li>
   );
-};
-
-ProjectItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  content: PropTypes.node.isRequired,
-  linkTitle: PropTypes.string.isRequired,
-  gitHubLink: PropTypes.string.isRequired,
-  theme: PropTypes.string.isRequired,
 };
 
 export default ProjectItem;

@@ -15,6 +15,7 @@ const Main = () => {
     <section
       className={`${css.container} ${theme === "light" ? css.light : css.dark}`}
     >
+      <div className={css.ambientGlow} />
       <div className={css.wrapper}>
         <div className={css.heroCard}>
           <div className={css.badge}>Frontend Developer</div>

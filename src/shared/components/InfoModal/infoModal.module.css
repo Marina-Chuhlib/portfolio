@@ -19,24 +19,46 @@
 }
 
 .button {
-  border-radius: 5px;
-  border: none;
-  background: #534b42;
-  color: #f4f4f4;
-  font-family: "Karla";
-  font-size: 16px;
-  height: 32px;
-  width: 115px;
-  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px 14px;
+
+  border-radius: 999px;
+
+  font-family: Karla, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  border: 1px solid rgba(160, 96, 86, 0.18);
+
+  background: rgba(160, 96, 86, 0.1);
+  color: #5a4f46;
+
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .button:hover {
-  border: none;
-  background-color: #514644;
-  color: #c1bbbb;
+  transform: translateY(-2px);
+
+  background: rgba(160, 96, 86, 0.16);
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  border-color: rgba(160, 96, 86, 0.25);
 }
 
 /* Theme */

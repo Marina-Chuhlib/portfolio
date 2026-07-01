@@ -64,10 +64,11 @@
 }
 
 .iconWrap {
-  background: linear-gradient(135deg, #7c5b4e, #5d4742);
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  background-color: #706458;
+  opacity: 0.9;
+  border-radius: 3px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,20 +82,20 @@
 .link,
 .linkSocial {
   transition:
-    transform 0.25s ease,
+    background-color 250ms ease,
     color 250ms ease,
-    background-color 250ms ease;
+    transform 250ms ease;
 }
 
 .linkSocial:hover {
   color: var(--primary);
-  transform: scale(1.14);
+  transform: translateY(-1px);
 }
 
 .link:hover,
 .link:focus {
   color: var(--primary);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   background-color: rgba(160, 96, 86, 0.1);
 }
 
