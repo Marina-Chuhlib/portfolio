@@ -13,9 +13,16 @@ import addition2 from "../../../images/addition2.png";
 
 import css from "./skills.module.css";
 
+interface Skill {
+  en: { key: string; value: string };
+  ua: { key: string; value: string };
+}
+
 const Skills = () => {
   const { theme } = useContext(ThemeContext);
   const { t } = useTranslation();
+
+  const typedSkills = skills as Skill[];
 
   const selectedLanguage = localStorage.getItem("language") || "en";
 
@@ -66,7 +73,7 @@ const Skills = () => {
 
       <div className={css.listWrapper}>
         <dl className={css.list}>
-          {skills.map((skill, index) => (
+          {typedSkills.map((skill, index) => (
             <React.Fragment key={index}>
               <dt className={css.item}>
                 {selectedLanguage === "ua" ? skill.ua.key : skill.en.key}

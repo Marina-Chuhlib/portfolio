@@ -12,12 +12,20 @@ import cv from "../../../images/marina-chukhlib-cv.pdf";
 
 import css from "./alertModal.module.css";
 
-function AlertModal({
+interface AlertModalProps {
+  denotation: any;
+  confirmText: any;
+  disagreeBtnText: any;
+  agreeBtnText: any;
+  className?: string;
+}
+
+const AlertModal = ({
   denotation,
   confirmText,
   disagreeBtnText,
   agreeBtnText,
-}) {
+}: AlertModalProps) => {
   const [open, setOpen] = useState(false);
   const [confirm, setConfirm] = useState(false);
   const { theme } = useContext(ThemeContext);
@@ -77,13 +85,6 @@ function AlertModal({
       </Dialog>
     </div>
   );
-}
-
-AlertModal.propTypes = {
-  denotation: PropTypes.string.isRequired,
-  confirmText: PropTypes.string.isRequired,
-  disagreeBtnText: PropTypes.string.isRequired,
-  agreeBtnText: PropTypes.string.isRequired,
 };
 
 export default AlertModal;

@@ -16,6 +16,17 @@ import { ThemeContext } from "../../theme/ThemeProvider";
 
 import css from "./infoModal.module.css";
 
+interface InfoModalProps {
+  denotation: string;
+  title: string;
+  content: React.ReactNode;
+  closeBtn: string;
+  linkDenotation?: string;
+  link?: string;
+  linkTitle?: string;
+  className?: string;
+}
+
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
     padding: theme.spacing(2),
@@ -25,7 +36,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
-export default function InfoModal({
+ const InfoModal = ({
   denotation,
   title,
   link,
@@ -33,7 +44,7 @@ export default function InfoModal({
   content,
   linkDenotation,
   closeBtn,
-}) {
+}: InfoModalProps) => {
   const [open, setOpen] = useState(false);
   const { theme } = useContext(ThemeContext);
 
@@ -127,12 +138,4 @@ export default function InfoModal({
   );
 }
 
-InfoModal.propTypes = {
-  denotation: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  content: PropTypes.node.isRequired,
-  linkDenotation: PropTypes.string,
-  link: PropTypes.string,
-  linkTitle: PropTypes.string,
-  closeBtn: PropTypes.string.isRequired,
-};
+export default InfoModal;

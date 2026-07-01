@@ -45,6 +45,10 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "prop-types": "^15.8.1"
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "prop-types": "^15.8.1",
+    "typescript": "^6.0.3"
   }
 }
