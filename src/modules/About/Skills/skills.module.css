@@ -40,6 +40,12 @@
   -moz-box-shadow: rgb(218, 140, 114) 0px 5px 15px;
 
   margin-bottom: 22px;
+
+  transition: transform 0.3s ease;
+}
+
+.certificateThumb:hover {
+  transform: scale(1.03);
 }
 
 .picture {

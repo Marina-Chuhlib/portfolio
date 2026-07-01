@@ -1,20 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  color-scheme: light;
+  --bg: #f6eee9;
+  --bg-accent: #fff6ef;
+  --text: #4a342d;
+  --muted: #7a685c;
+  --primary: #a06056;
+  --primary-strong: #7c4334;
+  --card: rgba(255, 255, 255, 0.76);
+  --border: rgba(160, 96, 86, 0.18);
+  --surface-strong: rgba(255, 248, 242, 0.8);
+  --surface-soft: rgba(255, 248, 242, 0.6);
+  --surface-dark: rgba(37, 51, 51, 0.78);
+  --surface-card: rgba(54, 69, 69, 0.82);
+}
+
+:root[data-theme="dark"] {
+  --bg: #253333;
+  --bg-accent: #304646;
+  --text: #f4ebde;
+  --muted: #d8d0c1;
+  --primary: #f5ebdf;
+  --primary-strong: #fff4e6;
+  --card: rgba(37, 51, 51, 0.78);
+  --border: rgba(255, 255, 255, 0.16);
+  --surface-strong: rgba(37, 51, 51, 0.78);
+  --surface-soft: rgba(44, 65, 65, 0.75);
+  --surface-dark: rgba(24, 34, 34, 0.95);
+  --surface-card: rgba(54, 69, 69, 0.84);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family:
+    "Manrope", Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 214, 187, 0.3),
+      transparent 24%
+    ),
+    linear-gradient(135deg, var(--bg) 0%, var(--bg-accent) 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
 
-  font-family: Merriweather;
+* {
+  box-sizing: border-box;
+}
 
-  background-color: #f3eee8;
-  color: #a06056;
+::selection {
+  background: rgba(160, 96, 86, 0.28);
+  color: var(--primary-strong);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 h1,
@@ -34,7 +83,7 @@ a {
   cursor: pointer;
   display: block;
   text-decoration: none;
-  color: #a06056;
+  color: var(--primary);
 }
 
 button {

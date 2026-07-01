@@ -1,55 +1,87 @@
-.wrapper {
+.container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+}
+
+.sliderTrack {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(160, 96, 86, 0.12);
+  border: 1px solid rgba(160, 96, 86, 0.16);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.45);
+}
+
+.option {
+  position: relative;
+  z-index: 2;
   border: none;
   cursor: pointer;
-  background-color: transparent;
-  color: #26498e;
-  font-size: 18px;
-  font-family: Merriweather;
+  background: transparent;
+  color: #6f5448;
+  font-size: 0.9rem;
+  font-family: "Manrope", Inter, sans-serif;
   font-weight: 700;
-
-  border-radius: 5px;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    background 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-}
-
-.wrapper:hover,
-.wrapper:focus {
-  color: #1b106e;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 8px 12px;
+  transition: color 220ms ease;
   outline: none;
-
-  background-image: url("../../../images/flag-usa.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.container.ua .wrapper:hover,
-.container.ua .wrapper:focus {
-  color: #f0f8ff;
+.option:hover,
+.option:focus {
+  color: #ffffff;
   outline: none;
-
-  background-image: url("../../../images/flag-ua.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-/* === */
-
-.container.dark .wrapper {
-  color: #aaa5a0;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    background 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+.option.active {
+  color: #ffffff;
 }
 
-.container.dark .wrapper:hover,
-.container.dark .wrapper:focus {
-  color: #1b106e;
+.indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #a06056, #875143);
+  box-shadow: 0 8px 16px rgba(160, 96, 86, 0.2);
+  transition: transform 250ms ease;
 }
 
-.container.dark.container.ua .wrapper:hover,
-.container.dark.container.ua .wrapper:focus {
-  color: #f0f8ff;
+.container.ua .indicator {
+  transform: translateX(100%);
+  background: linear-gradient(135deg, #4f6f7a, #3f5660);
+  box-shadow: 0 8px 16px rgba(79, 111, 122, 0.2);
+}
+
+.container.dark .sliderTrack {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.container.dark .option {
+  color: #f4ebde;
+}
+
+.container.dark .option:hover,
+.container.dark .option:focus,
+.container.dark .option.active {
+  color: #ffffff;
+}
+
+.container.dark .indicator {
+  background: linear-gradient(135deg, #f2b18d, #be8268);
+  box-shadow: 0 8px 16px rgba(242, 177, 141, 0.2);
+}
+
+.container.dark.container.ua .indicator {
+  background: linear-gradient(135deg, #7aa1ab, #4f6f7a);
 }

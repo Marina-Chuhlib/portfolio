@@ -1,74 +1,73 @@
+.container {
+  padding: 12px 20px 100px;
+}
+
 .container.light {
-  background-color: #ffffff;
+  background: transparent;
 }
 
 .sectionWrapper {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-
-  padding: 20px;
-  padding-bottom: 100px;
+  margin: 0 auto;
+  padding: 32px 20px 24px;
+  border-radius: 32px;
+  background: var(--surface-soft);
+  border: 1px solid rgba(160, 96, 86, 0.12);
+  box-shadow: 0 16px 45px rgba(95, 70, 56, 0.09);
 }
 
 .title {
-  margin-bottom: 16px;
-  color: #121212;
-  color: #534b42;
+  margin-bottom: 14px;
+  color: var(--primary);
   text-transform: uppercase;
-  font-weight: 300;
-  font-size: 28px;
-  line-height: 1.6;
-
+  font-family: "Manrope", Inter, sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
   text-align: center;
 }
 
 .text {
-  max-width: 500px;
-  color: #706458;
-  font-weight: 400;
-  font-size: 18px;
-
-  margin-bottom: 30px;
+  max-width: 680px;
+  margin: 0 auto 30px;
+  color: var(--muted);
+  font-family: "Manrope", Inter, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: center;
 }
 
-/* Theme */
-
 .container.dark {
-  background-color: #567878;
-  background: -webkit-linear-gradient(
-    180deg,
-    hsl(180, 19%, 21%) 14%,
-    rgb(90, 139, 141),
-    rgb(102, 103, 96)
-  );
-  background: -moz-linear-gradient(
-    180deg,
-    rgb(44, 65, 65) 14%,
-    rgb(90, 139, 141),
-    rgb(102, 103, 96)
-  );
   background: linear-gradient(
     180deg,
-    rgb(44, 65, 65) 14%,
-    rgb(90, 139, 141),
-    rgb(102, 103, 96)
+    rgba(44, 65, 65, 0.06),
+    rgba(44, 65, 65, 0.16)
   );
+}
+
+.container.dark .sectionWrapper {
+  background: var(--surface-dark);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
 }
 
 .container.dark .title,
 .titleSkills {
-  color: #847467;
+  color: #f5ebdf;
 }
 
 .container.dark .text {
-  color: #aaa5a0;
+  color: #d8d0c1;
 }
 
-/* Screen */
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    padding: 12px 12px 72px;
+  }
+
   .sectionWrapper {
-    padding-bottom: 50px;
+    padding: 24px 12px 20px;
   }
 }

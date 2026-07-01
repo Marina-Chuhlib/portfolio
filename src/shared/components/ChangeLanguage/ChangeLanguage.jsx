@@ -5,44 +5,40 @@ import i18n from "../../../utils/i18n/config";
 import css from "./changeLanguage.module.css";
 
 const options = [
-  {
-    label: "EN",
-    value: "en",
-  },
-  {
-    label: "UA",
-    value: "ua",
-  },
+  { label: "EN", value: "en" },
+  { label: "UA", value: "ua" },
 ];
 
 const ChangeLanguage = () => {
   const { theme } = useContext(ThemeContext);
+  const language = localStorage.getItem("language") || "en";
 
-  function changeLanguage(e) {
-    const currentLng = e.target.value;
-    localStorage.setItem("language", currentLng);
-    const language = localStorage.getItem("language");
-
-    i18n.changeLanguage(language);
+  function changeLanguage(value) {
+    localStorage.setItem("language", value);
+    i18n.changeLanguage(value);
   }
-
-  const language = localStorage.getItem("language");
 
   return (
     <div
       className={`${css.container} ${theme === "light" ? css.light : css.dark} ${language === "ua" ? css.ua : ""}`}
     >
-      <select
-        value={language || "en"}
-        onChange={changeLanguage}
-        className={css.wrapper}
-      >
-        {options.map((option, idx) => (
-          <option key={idx} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
+      <div className={css.sliderTrack}>
+        <button
+          type="button"
+          className={`${css.option} ${language === "en" ? css.active : ""}`}
+          onClick={() => changeLanguage("en")}
+        >
+          EN
+        </button>
+        <button
+          type="button"
+          className={`${css.option} ${language === "ua" ? css.active : ""}`}
+          onClick={() => changeLanguage("ua")}
+        >
+          UA
+        </button>
+        <span className={css.indicator} />
+      </div>
     </div>
   );
 };
