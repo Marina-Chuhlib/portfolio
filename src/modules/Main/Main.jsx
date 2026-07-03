@@ -4,7 +4,6 @@ import { ThemeContext } from "../../shared/theme/ThemeProvider";
 import CodeSnippet from "../../shared/components/CodeSnippet/CodeSnippet";
 import Highlights from "../../shared/components/Highlights/Highlights";
 
-import image from "../../images/image.png";
 
 import css from "./main.module.css";
 

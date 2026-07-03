@@ -1,8 +1,5 @@
 import { useContext } from "react";
 
-import LightModeIcon from "@mui/icons-material/LightMode";
-import NightsStayIcon from "@mui/icons-material/NightsStay";
-
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import BedtimeRoundedIcon from "@mui/icons-material/BedtimeRounded";
 

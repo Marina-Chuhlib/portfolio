@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useTranslation } from "react-i18next";
 
 import { ThemeContext } from "../../theme/ThemeProvider";
 
@@ -10,7 +9,6 @@ import css from "./scrollButton.module.css";
 const ScrollButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { theme } = useContext(ThemeContext);
-  const { t } = useTranslation();
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -45,7 +43,6 @@ const ScrollButton = () => {
         }`}
       >
         <KeyboardDoubleArrowUpIcon />
-  
       </button>
     </div>
   );
