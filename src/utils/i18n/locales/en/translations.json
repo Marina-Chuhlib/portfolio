@@ -3,8 +3,8 @@
   "about": "About",
   "portfolio": "Portfolio",
   "contact": "Contact",
-  "mainText": "Hi, I'm Marina — Frontend Developer",
-  "mainSubtitle": "I build modern interfaces for web and mobile apps using React and React Native. I love when the code is clean and the app just feels right.",
+  "mainText": "Hi, I'm Marina.",
+  "mainSubtitle": "I develop modern user interfaces for web and mobile applications.",
   "aboutTitle": "About Me",
   "aboutContent": "I have commercial experience developing web and mobile apps. I focus on code quality, performance and great user experience. I adapt quickly to new tasks and value clean, readable code and stable scalable products.",
   "showCvBtn": "Show CV",
@@ -59,11 +59,11 @@
   "topBtn": "Top",
 
   "highlightProductionTitle": "Production-ready",
-  "highlightProductionText": "Two apps live in the App Store and Google Play",
-  "highlightI18nTitle": "i18n / localization",
-  "highlightI18nText": "Bilingual content (UA/EN) for real projects",
+  "highlightProductionText": "Two apps published on the App Store and Google Play, plus a web admin panel for platform management.",
+  "highlightI18nTitle": "Localization",
+  "highlightI18nText": "i18next integration with scalable UA/EN localization.",
   "highlightArchitectureTitle": "Architecture",
-  "highlightArchitectureText": "Redux Toolkit, feature-slice approach — code that's easy to scale",
+  "highlightArchitectureText": "Redux Toolkit, feature-based architecture, and reusable components.",
   "highlightUiTitle": "Complex UI cases",
   "highlightUiText": "Tables with filters, large data sets, admin panels"
 }

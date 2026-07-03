@@ -78,24 +78,23 @@
   align-items: center;
   justify-content: center;
 
-  padding: 10px 14px;
+  padding: 9px 18px;
 
   border-radius: 999px;
 
-  font-family: Karla, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
 
   cursor: pointer;
 
   border: 1px solid rgba(160, 96, 86, 0.18);
 
-  background: rgba(160, 96, 86, 0.1);
+  /* background: rgba(160, 96, 86, 0.1); */
   color: #5a4f46;
 
-  box-shadow:
+  /* box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    inset 0 1px 0 rgba(255, 255, 255, 0.35); */
 
   transition:
     transform 0.18s ease,
@@ -105,24 +104,19 @@
 }
 
 .link:hover {
-  transform: translateY(-2px);
-
-  background: rgba(160, 96, 86, 0.16);
-
-  box-shadow:
-    0 14px 30px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
-
-  border-color: rgba(160, 96, 86, 0.25);
+  border-color: var(--primary);
+  color: var(--primary-strong);
+  transform: translateY(-1px);
 }
 
 .link.dark {
-  background-color: #706458;
-  color: #aaa4a0;
+  color: var(--text);
+  border: 1px solid var(--border);
+  background: transparent;
 }
 
 .link:hover.dark {
-  background: #928886;
+  border-color: var(--primary);
 }
 
 .iconWrap {

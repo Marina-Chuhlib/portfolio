@@ -1,6 +1,5 @@
-import * as React from "react";
-import { useState } from "react";
-import PropTypes from "prop-types";
+import { useState, useContext } from "react";
+import type { ReactNode } from "react";
 
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
@@ -11,7 +10,6 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-import { useContext } from "react";
 import { ThemeContext } from "../../theme/ThemeProvider";
 
 import css from "./infoModal.module.css";
@@ -19,7 +17,7 @@ import css from "./infoModal.module.css";
 interface InfoModalProps {
   denotation: string;
   title: string;
-  content: React.ReactNode;
+  content: ReactNode;
   closeBtn: string;
   linkDenotation?: string;
   link?: string;
@@ -29,13 +27,15 @@ interface InfoModalProps {
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialog-paper": {
-    borderRadius: 12,
+    borderRadius: 20,
+    overflow: "hidden",
+    backgroundImage: "none",
   },
   "& .MuiDialogContent-root": {
-    padding: theme.spacing(2),
+    padding: theme.spacing(3),
   },
   "& .MuiDialogActions-root": {
-    padding: theme.spacing(1),
+    padding: theme.spacing(2, 3),
   },
 }));
 
@@ -50,86 +50,70 @@ const InfoModal = ({
 }: InfoModalProps) => {
   const [open, setOpen] = useState(false);
   const { theme } = useContext(ThemeContext);
+  const themeClass = theme === "light" ? css.light : css.dark;
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClickOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <div>
       <button
         type="button"
         onClick={handleClickOpen}
-        className={`${css.button} ${theme === "light" ? css.light : css.dark}`}
+        className={`${css.openBtn} ${themeClass}`}
       >
         {denotation}
       </button>
+
       <BootstrapDialog
         onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
+        aria-labelledby="info-modal-title"
         open={open}
       >
         <DialogTitle
-          sx={{ m: 0, p: 2 }}
-          id="customized-dialog-title"
-          className={`${css.modal} ${theme === "light" ? css.light : css.dark}`}
+          id="info-modal-title"
+          className={`${css.modal} ${css.title} ${themeClass}`}
         >
           {title}
         </DialogTitle>
+
         <IconButton
           aria-label="close"
           onClick={handleClose}
-          sx={{
-            position: "absolute",
-            right: 8,
-            top: 8,
-          }}
-          style={{
-            color: "#534B42",
-          }}
+          className={`${css.closeBtn} ${themeClass}`}
         >
-          <CloseIcon />
+          <CloseIcon fontSize="small" />
         </IconButton>
+
         <DialogContent
           dividers
-          className={`${css.modal} ${theme === "light" ? css.light : css.dark}`}
+          className={`${css.modal} ${css.content} ${themeClass}`}
         >
           {content}
 
           {linkDenotation && (
-            <>
-              <div className={css.wrap}>
-                <a
-                  className={`${css.link} ${
-                    theme === "light" ? css.light : css.dark
-                  }`}
-                  href={link}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  title={linkTitle}
-                  onClick={handleClose}
-                >
-                  {linkDenotation}
-                  <ArrowForwardIosIcon fontSize="small" />
-                </a>
-              </div>
-            </>
+            <div className={css.wrap}>
+              <a
+                className={`${css.link} ${themeClass}`}
+                href={link}
+                target="_blank"
+                rel="noreferrer noopener"
+                title={linkTitle}
+                onClick={handleClose}
+              >
+                {linkDenotation}
+                <ArrowForwardIosIcon className={css.linkIcon} />
+              </a>
+            </div>
           )}
         </DialogContent>
 
-        <DialogActions
-          className={`${css.modal} ${theme === "light" ? css.light : css.dark}`}
-        >
+        <DialogActions className={`${css.modal} ${themeClass}`}>
           <button
             type="button"
             autoFocus
             onClick={handleClose}
-            className={`${css.button} ${
-              theme === "light" ? css.light : css.dark
-            }`}
+            className={`${css.closeAction} ${themeClass}`}
           >
             {closeBtn}
           </button>

@@ -4,6 +4,7 @@
   color-scheme: light;
   --bg: #f6eee9;
   --bg-accent: #fff6ef;
+  --modal-bg: #fff8f2;
   --text: #4a342d;
   --muted: #7a685c;
   --primary: #a06056;
@@ -19,7 +20,7 @@
 :root[data-theme="dark"] {
   --bg: #253333;
   --bg-accent: #1a2222;
-
+  --modal-bg: #3a4d4d;
   --text: #f4ebde;
   --muted: #d8d0c1;
   --primary: #f5ebdf;
@@ -47,13 +48,6 @@ body {
     "Manrope", Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background:
-    radial-gradient(
-      circle at top left,
-      rgba(255, 214, 187, 0.3),
-      transparent 24%
-    ),
-    linear-gradient(135deg, var(--bg) 0%, var(--bg-accent) 100%); */
 
   background:
     radial-gradient(

@@ -1,111 +1,147 @@
-.content {
-  margin-bottom: 15px;
-  line-height: 1.6;
-
-  border-radius: 28px;
+.openBtn {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  height: 40px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease;
 }
 
-.modal {
-  font-family: "Manrope";
+.openBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary-strong);
+  transform: translateY(-1px);
+}
+
+.openBtn.dark:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 24px 56px 16px 24px !important;
   color: var(--text);
-  line-height: 1.6;
+}
+
+.closeBtn {
+  position: absolute !important;
+  right: 16px;
+  top: 16px;
+  color: var(--muted) !important;
+  transition:
+    color 220ms ease,
+    background-color 220ms ease;
+}
+
+.closeBtn:hover {
+  color: var(--primary-strong) !important;
+  background-color: rgba(160, 96, 86, 0.1) !important;
+}
+
+.closeBtn.dark:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.content {
+  line-height: 1.7;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.content p {
+  margin: 0 0 16px;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.wrap {
+  margin-top: 20px;
 }
 
 .link {
-  display: flex;
-  width: fit-content;
+  display: inline-flex;
   align-items: center;
-  /* font-family: "Karla"; */
-  font-family: "Manrope";
-  font-weight: 500;
-  color: var(--primary);
-  font-size: 18px;
-  padding-top: 8px;
+  gap: 8px;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--primary-strong);
+  text-decoration: none;
+  padding: 8px 4px;
+  transition:
+    gap 220ms ease,
+    color 220ms ease;
 }
 
 .link:hover {
-  color: #a49e97;
+  gap: 12px;
+  color: var(--primary);
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 10px 14px;
-
-  border-radius: 999px;
-
-  font-family: Karla, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-
-  cursor: pointer;
-
-  border: 1px solid rgba(160, 96, 86, 0.18);
-
-  background: rgba(160, 96, 86, 0.1);
-  color: #5a4f46;
-
-  box-shadow:
-    0 10px 20px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
-
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.25s ease,
-    background-color 0.25s ease,
-    border-color 0.25s ease;
+.linkIcon {
+  font-size: 14px !important;
 }
 
-.button:hover {
-  transform: translateY(-2px);
-
-  background: rgba(160, 96, 86, 0.16);
-
-  box-shadow:
-    0 14px 30px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
-
-  border-color: rgba(160, 96, 86, 0.25);
+.modal.light {
+  background-color: var(--card);
+  border-color: var(--border);
 }
-
-/* Theme */
 
 .modal.dark {
-  background-color: rgb(82, 128, 128);
-  color: #e5dede;
+  background-color: var(--modal-bg);
+  border-color: var(--border);
+  color: var(--text);
 }
 
-.link.dark {
-  color: #b4acac;
+.closeAction {
+  border: none;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  height: 40px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition:
+    background-color 220ms ease,
+    transform 220ms ease;
 }
 
-.link:hover.dark {
-  color: #534b42;
+.closeAction:hover {
+  background: var(--primary-strong);
+  transform: translateY(-1px);
 }
 
-.button.dark {
-  background-color: #706458;
-  color: #aaa4a0;
-
-  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button:hover.dark {
-  background: #928886;
+.closeAction.dark {
+  background: var(--surface-strong);
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .button {
+  .openBtn,
+  .closeAction {
     height: 44px;
-    width: 90px;
-    padding-left: 4px;
-    padding-right: 4px;
     font-size: 14px;
+  }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .title {
+    font-size: 19px;
+    padding: 20px 48px 14px 20px !important;
+  }
+
+  .content {
+    font-size: 15px;
   }
 }

@@ -98,14 +98,14 @@
   margin: 0;
   padding: 0;
 
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
 .item {
   font-weight: 600;
   font-family: "Manrope", Inter, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .descr {
@@ -113,10 +113,6 @@
   font-family: "Manrope", Inter, sans-serif;
   font-size: 16px;
   font-weight: 400;
-}
-
-.item:nth-child(9) {
-  margin-top: 70px;
 }
 
 .descr:not(:last-child) {
