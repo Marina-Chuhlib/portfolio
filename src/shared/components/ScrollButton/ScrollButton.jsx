@@ -45,7 +45,7 @@ const ScrollButton = () => {
         }`}
       >
         <KeyboardDoubleArrowUpIcon />
-        {t("topBtn")}
+  
       </button>
     </div>
   );

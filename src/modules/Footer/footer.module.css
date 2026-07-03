@@ -99,7 +99,7 @@
   background-color: rgba(160, 96, 86, 0.1);
 }
 
-.wrapper.dark {
+.wrapper.dark .listWrapper {
   background: var(--surface-dark);
 }
 
@@ -116,7 +116,7 @@
 }
 
 .wrapper.dark .icon {
-  color: #44504d;
+  color: var(--bg);
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {

@@ -18,7 +18,8 @@
 
 :root[data-theme="dark"] {
   --bg: #253333;
-  --bg-accent: #304646;
+  --bg-accent: #1a2222;
+
   --text: #f4ebde;
   --muted: #d8d0c1;
   --primary: #f5ebdf;
@@ -46,15 +47,102 @@ body {
     "Manrope", Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:
+  /* background:
     radial-gradient(
       circle at top left,
       rgba(255, 214, 187, 0.3),
       transparent 24%
     ),
-    linear-gradient(135deg, var(--bg) 0%, var(--bg-accent) 100%);
+    linear-gradient(135deg, var(--bg) 0%, var(--bg-accent) 100%); */
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(255, 211, 182, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(255, 255, 255, 0.35),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 60% 100%,
+      rgba(220, 190, 175, 0.14),
+      transparent 35%
+    ),
+    linear-gradient(180deg, var(--bg-accent), var(--bg));
+
   color: var(--text);
   min-height: 100vh;
+  transition:
+    background 0.4s ease,
+    color 0.2s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  z-index: -1;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+:root[data-theme="dark"] body {
+  background:
+    radial-gradient(
+      circle at 78% 32%,
+      rgba(120, 200, 190, 0.14),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 15% 70%,
+      rgba(90, 130, 125, 0.1),
+      transparent 45%
+    ),
+    linear-gradient(180deg, var(--bg-accent), var(--bg));
+}
+
+:root[data-theme="dark"] body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at 70% 30%, black 0%, transparent 65%);
+}
+
+/* :root[data-theme="dark"] body {
+  background:
+    radial-gradient(
+      circle at 20% 15%,
+      rgba(120, 180, 175, 0.1),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 25%,
+      rgba(90, 130, 125, 0.08),
+      transparent 45%
+    ),
+    linear-gradient(180deg, var(--bg-accent), var(--bg));
+} */
+
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 * {

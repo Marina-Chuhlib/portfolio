@@ -26,12 +26,12 @@ const Footer = () => {
         <h2 className={css.title}>{t("contactTitle")} </h2>
         <div className={css.listWrapper}>
           <ul className={css.contactList}>
-            <li className={css.item}>
+            {/* <li className={css.item}>
               <a href="tel:+380932796086" className={css.link}>
                 <span className={css.decor}>{t("phone")} </span>
                 +38-093-279-60-86
               </a>
-            </li>
+            </li> */}
             <li className={css.item}>
               <a href="mailto:marinachuhlib@gmail.com" className={css.link}>
                 <span className={css.decor}> {t("email")}</span>

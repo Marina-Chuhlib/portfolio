@@ -1,17 +1,26 @@
 .content {
   margin-bottom: 15px;
   line-height: 1.6;
+
+  border-radius: 28px;
+}
+
+.modal {
+  font-family: "Manrope";
+  color: var(--text);
+  line-height: 1.6;
 }
 
 .link {
   display: flex;
   width: fit-content;
   align-items: center;
-  font-family: "Karla";
-  font-weight: 700;
-  color: #a06056;
-  font-size: 22px;
-  padding: 4px 7px;
+  /* font-family: "Karla"; */
+  font-family: "Manrope";
+  font-weight: 500;
+  color: var(--primary);
+  font-size: 18px;
+  padding-top: 8px;
 }
 
 .link:hover {

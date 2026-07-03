@@ -46,11 +46,12 @@ const AppBar = () => {
       className={`${css.container} ${theme === "light" ? css.light : css.dark}`}
     >
       <div className={css.wrapper}>
-        <a
-          className={`${css.title} ${theme === "light" ? css.light : css.dark}`}
-          href="#about"
-        >
-          {t("name")}
+        <a className={css.brand} href="#about">
+      
+          <div className={css.text}>
+            <span className={css.name}>{t("name")}</span>
+            <span className={css.role}>frontend</span>
+          </div>
         </a>
         <nav>
           <ul className={css.list}>

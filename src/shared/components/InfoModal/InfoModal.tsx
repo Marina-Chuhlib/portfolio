@@ -28,6 +28,9 @@ interface InfoModalProps {
 }
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  "& .MuiDialog-paper": {
+    borderRadius: 12,
+  },
   "& .MuiDialogContent-root": {
     padding: theme.spacing(2),
   },
@@ -36,7 +39,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
- const InfoModal = ({
+const InfoModal = ({
   denotation,
   title,
   link,
@@ -72,7 +75,6 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
         <DialogTitle
           sx={{ m: 0, p: 2 }}
           id="customized-dialog-title"
-          style={{ color: "#534B42", fontFamily: "Karla" }}
           className={`${css.modal} ${theme === "light" ? css.light : css.dark}`}
         >
           {title}
@@ -93,7 +95,6 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
         </IconButton>
         <DialogContent
           dividers
-          style={{ lineHeight: "1.5", fontFamily: "Varta", fontSize: "18px" }}
           className={`${css.modal} ${theme === "light" ? css.light : css.dark}`}
         >
           {content}
@@ -136,6 +137,6 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
       </BootstrapDialog>
     </div>
   );
-}
+};
 
 export default InfoModal;

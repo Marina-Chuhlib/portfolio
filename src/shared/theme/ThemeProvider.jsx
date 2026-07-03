@@ -2,6 +2,8 @@ import { createContext, useEffect, useState } from "react";
 
 export const ThemeContext = createContext();
 
+
+
 const getInitialTheme = () => {
   if (typeof window === "undefined") return "light";
 

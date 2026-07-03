@@ -3,49 +3,61 @@
   bottom: 20px;
   right: 20px;
   z-index: 999;
-  transition: opacity 0.3s;
+
   opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
 }
 
 .scroll.visible {
   opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .btnScroll {
+  width: 52px;
+  height: 52px;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #e1d8ce;
-  color: #706458;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
 
-  font-size: 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(225, 216, 206, 0.85);
+  backdrop-filter: blur(12px);
+
   cursor: pointer;
 
-  padding: 4px;
-
-  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .btnScroll:hover {
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.btnScroll:active {
+  transform: scale(0.96);
 }
 
 /* Theme */
-
 .btnScroll.dark {
-  background: #706458;
-  color: #aaa5a0;
-  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(44, 65, 65, 0.6);
+  color: #d8d0c1;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.btnScroll:hover.dark {
-  box-shadow: 0px 0px 15px 0px rgba(227, 216, 84, 0.877);
+.btnScroll.dark:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }

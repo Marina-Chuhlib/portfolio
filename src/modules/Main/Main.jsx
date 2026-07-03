@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../shared/theme/ThemeProvider";
 import CodeSnippet from "../../shared/components/CodeSnippet/CodeSnippet";
+import Highlights from "../../shared/components/Highlights/Highlights";
 
 import image from "../../images/image.png";
 
@@ -17,18 +18,19 @@ const Main = () => {
     >
       <div className={css.ambientGlow} />
       <div className={css.wrapper}>
+
         <div className={css.heroCard}>
           <div className={css.badge}>Frontend Developer</div>
           <h1 className={css.title}>{t("mainText")}</h1>
-          <p className={css.subtitle}>
-            {t("mainSubtitle")}
-          </p>
+          <p className={css.subtitle}>{t("mainSubtitle")}</p>
         </div>
-        {/* <div className={css.thumb}> */}
-          {/* <img src={image} alt="picture" width="200" className={css.photo} /> */}
-          <CodeSnippet />
-        {/* </div> */}
+
+        <CodeSnippet />
+
+    
       </div>
+      
+          <Highlights />
     </section>
   );
 };

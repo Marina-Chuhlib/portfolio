@@ -1,13 +1,31 @@
 .container {
   position: relative;
-  min-height: calc(100dvh - 72px);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 0 20px 140px;
+  gap: 80px;
+  padding: 20px;
+  padding-bottom: 100px;
   overflow: hidden;
+
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  /* background: radial-gradient(circle, rgba(160, 96, 86, 0.12), transparent 60%); */
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+/* .container::before,
 .container::after,
 .container .ambientGlow {
   content: "";
@@ -16,31 +34,24 @@
   filter: blur(26px);
   opacity: 0.6;
   pointer-events: none;
-}
+} */
 
 .container::before {
-  inset: -60px auto auto -50px;
-  width: 220px;
-  height: 220px;
-  background: rgba(255, 188, 138, 0.25);
-  animation: driftOne 10s ease-in-out infinite alternate;
+  /* width: 280px;
+  height: 280px;
+  background: rgba(255, 188, 138, 0.18); */
 }
 
 .container::after {
-  inset: auto -70px -50px auto;
-  width: 260px;
-  height: 260px;
-  background: rgba(160, 96, 86, 0.16);
-  animation: driftTwo 12s ease-in-out infinite alternate;
+  /* width: 320px;
+  height: 320px;
+  background: rgba(160, 96, 86, 0.12); */
 }
 
 .ambientGlow {
-  top: 20%;
-  right: 8%;
-  width: 180px;
-  height: 180px;
-  background: rgba(255, 255, 255, 0.2);
-  animation: driftThree 14s ease-in-out infinite alternate;
+  /* width: 240px;
+  height: 240px;
+  background: rgba(255, 255, 255, 0.08); */
 }
 
 @keyframes driftOne {
@@ -71,25 +82,27 @@
 }
 
 .wrapper {
-  position: relative;
-  z-index: 1;
-  margin: 0 auto;
-  max-width: 1200px;
+  width: 100%;
+
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 40px;
-  padding: 92px 24px 24px;
+
+  padding: 0;
 }
 
 .heroCard {
   max-width: 620px;
   padding: 28px 32px;
+  border-radius: 28px;
+  /* max-width: 620px;
+  padding: 28px 32px;
   border: 1px solid rgba(160, 96, 86, 0.16);
   border-radius: 28px;
   background: rgba(255, 248, 242, 0.74);
   box-shadow: 0 20px 60px rgba(95, 70, 56, 0.12);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px); */
 }
 
 .badge {
@@ -174,20 +187,19 @@
 }
 
 .container.light {
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     rgba(255, 248, 242, 0.9),
     rgba(247, 238, 231, 0.92)
-  );
+  ); */
 }
 
 .container.dark {
-  padding-bottom: 180px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     rgba(44, 65, 65, 0.96),
     rgba(78, 112, 112, 0.94)
-  );
+  ); */
 }
 
 .container.dark .heroCard {

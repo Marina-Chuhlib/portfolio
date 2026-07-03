@@ -1,20 +1,35 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 
 import InfoModal from "../../../shared/components/InfoModal/InfoModal";
 
 import css from "./projectItem.module.css";
 
+import { Theme } from "shared/theme/type";
+
+export interface Item {
+  id: string;
+  title: string;
+  link: string;
+  image: string;
+  text: string;
+  content: ReactNode;
+  linkTitle: string;
+  apk?: string;
+  theme: Theme;
+}
+
 const ProjectItem = ({
+  id,
   title,
   link,
   image,
   text,
   content,
   linkTitle,
+  apk,
   theme,
-}) => {
+}: Item) => {
   const { t } = useTranslation();
 
   return (
@@ -36,7 +51,7 @@ const ProjectItem = ({
           denotation={t("skillsBtn")}
           title={title}
           content={content}
-          linkDenotation={t("visitBtn")}
+          linkDenotation={apk ? "GitHub Link" : t("visitBtn")}
           link={link}
           linkTitle={linkTitle}
           closeBtn={t("closeBtn")}
@@ -48,7 +63,7 @@ const ProjectItem = ({
           title={title}
           className={`${css.link} ${theme === "light" ? css.light : css.dark}`}
         >
-          {t("visitBtn")}
+          {apk ? "GitHub Link" : t("visitBtn")}
         </a>
       </div>
     </li>

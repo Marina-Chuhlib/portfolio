@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useState, useContext } from "react";
-import PropTypes from "prop-types";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -58,6 +57,13 @@ const AlertModal = ({
         open={open}
         onClose={handleClose}
         aria-describedby="alert-dialog-description"
+        sx={{
+          "& .MuiDialog-paper": {
+            borderRadius: "16px",
+            overflow: "hidden",
+            padding: 1,
+          },
+        }}
       >
         <DialogContent
           className={`${css.modal} ${theme === "light" ? css.light : css.dark}`}

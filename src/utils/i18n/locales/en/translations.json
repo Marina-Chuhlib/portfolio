@@ -18,6 +18,10 @@
   "projectTitle": "Projects",
   "portfolioText": "In this section, you can explore my individual and collaborative group projects",
 
+  "cryptoTrackerCardText": "Crypto Tracker is a mobile app for browsing real-time cryptocurrency rates, with search and the ability to add coins to favorites.",
+  "cryptoTrackerContent": "The app was built on React Native CLI without a starter template, to demonstrate architectural decision-making and code quality from the ground up. State management is handled with Redux Toolkit, and live exchange rates are pulled from the CoinGecko API. A release APK build was configured and published on GitHub Releases for direct installation.",
+  "cryptoTrackerTechnologies": "Tools and technologies used: React Native CLI, TypeScript, Redux Toolkit, CoinGecko API, Feature-Sliced Design.",
+
   "ecosolutionCardText": "Ecosolution is an adaptive and accessible landing page dedicated to promoting and advancing renewable energy solutions for a cleaner and more sustainable future.",
   "ecosolutionContent": "The website is designed with adaptability in mind, ensuring a smooth user experience on various devices, including mobile phones and tablets. The site features a convenient burger menu for easy navigation, engaging carousel slides, and an organized FAQ section with a dropdown list. Additionally, a user-friendly form is available for inquiries and communication.",
   "ecosolutionTechnologies": "Tools and technologies used: HTML, CSS, JavaScript, React, Material-UI.",
@@ -52,5 +56,14 @@
   "phone": "Phone:",
   "email": "Email:",
 
-  "topBtn": "Top"
+  "topBtn": "Top",
+
+  "highlightProductionTitle": "Production-ready",
+  "highlightProductionText": "Two apps live in the App Store and Google Play",
+  "highlightI18nTitle": "i18n / localization",
+  "highlightI18nText": "Bilingual content (UA/EN) for real projects",
+  "highlightArchitectureTitle": "Architecture",
+  "highlightArchitectureText": "Redux Toolkit, feature-slice approach — code that's easy to scale",
+  "highlightUiTitle": "Complex UI cases",
+  "highlightUiText": "Tables with filters, large data sets, admin panels"
 }
