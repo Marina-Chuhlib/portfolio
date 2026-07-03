@@ -38,7 +38,7 @@ const About = () => {
         <div className={css.thumb}>
           <img
             src={marina}
-            alt="Photo of Marina"
+            alt="Marina"
             width={370}
             className={css.photo}
           />

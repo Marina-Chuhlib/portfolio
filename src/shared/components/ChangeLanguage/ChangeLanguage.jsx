@@ -4,11 +4,6 @@ import i18n from "../../../utils/i18n/config";
 
 import css from "./changeLanguage.module.css";
 
-const options = [
-  { label: "EN", value: "en" },
-  { label: "UA", value: "ua" },
-];
-
 const ChangeLanguage = () => {
   const { theme } = useContext(ThemeContext);
   const language = localStorage.getItem("language") || "en";
